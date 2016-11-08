@@ -1,0 +1,15 @@
+<view>{{text}}</view>
+<!--<view>{{array[0].msg}}</view>-->
+<!--<view bindTap="viewTap">click me</view>-->
+<!--<button bindTap="viewTap">click me<button/>-->
+<button bindtap="changeText"> Change normal data </button>
+<view wx:for="{{array}}">{{item}}</view>
+<view bindtap="add">{{count}}</view>
+<checkbox checked = "{{true}}">checkbox</checkbox>
+<view hidden="{{flag? true : false}}">Hidden</view>
+<view>{{a+b}}+{{c}}+d</view>
+<view>{{"hello" +" "+ name}}</view>
+<view>{{object.text}}{{array[0]}}</view>
+<!--<view wx:for="{{[zero,1,2,3,4]}}">{{item}}<view/>-->
+<!--<template is="objectCombine" data="{{...obj1,...obj2,e:5}}"><template/>-->
+<progress percent="15" color="#09BB07" show-info="true" stroke-width="6" active="true"/>
