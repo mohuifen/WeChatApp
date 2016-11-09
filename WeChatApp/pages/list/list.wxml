@@ -1,15 +1,88 @@
-<view>{{text}}</view>
+
+<!--
+<template name="msgItem">
+  <view class="Cell">
+    <label class="Label">123</label>
+    <label class="time"> Time: {{time}} </label>
+
+  <text> Time: {{time}} </text>
+  </view>
+</template>
+-->
+
+
+
+<!--
+<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>-->
+
+
+
+
+<!--<view>{{text}}</view>-->
 <!--<view>{{array[0].msg}}</view>-->
 <!--<view bindTap="viewTap">click me</view>-->
 <!--<button bindTap="viewTap">click me<button/>-->
-<button bindtap="changeText"> Change normal data </button>
-<view wx:for="{{array}}">{{item}}</view>
+<!--<button bindtap="changeText"> Change normal data </button>
 <view bindtap="add">{{count}}</view>
 <checkbox checked = "{{true}}">checkbox</checkbox>
 <view hidden="{{flag? true : false}}">Hidden</view>
 <view>{{a+b}}+{{c}}+d</view>
 <view>{{"hello" +" "+ name}}</view>
-<view>{{object.text}}{{array[0]}}</view>
+<view>{{object.text}}{{array[0]}}</view>-->
 <!--<view wx:for="{{[zero,1,2,3,4]}}">{{item}}<view/>-->
 <!--<template is="objectCombine" data="{{...obj1,...obj2,e:5}}"><template/>-->
-<progress percent="15" color="#09BB07" show-info="true" stroke-width="6" active="true"/>
+<!--<progress percent="15" color="#09BB07" show-info="true" stroke-width="6" active="true"/>-->
+
+
+<!--<template is="msgItem" data="{{...item}}"/>
+
+<template name="odd">
+  <view> odd </view>
+</template>
+<template name="even">
+  <view> even </view>
+</template>-->
+
+
+<!--<block wx:for="{{array}}">
+    <template is="msgItem"/>
+</block>-->
+
+
+
+
+<!--<view wx:for="{{array}}" class="List">{{item}}</view>-->
+
+
+<View class="page">
+
+    <image style="width: 100%; height: 243px; background-color: #888888;" mode="{{top}}" src="{{src}}"></image>
+    
+    <view class="buttonView">
+        <button class="button" type="default"  plain="{{plain}}" disabled="{{disabled}}" bindtap="warn"> 切换上图 </button>
+    </view>
+    <view class="seperatorView"  bindtap="clickroom"></view>
+
+    <!--列表  View-->
+    <view class="listView" >
+        
+        <block wx:for-items="{{list}}">
+            <!--cell-->
+            <view  class="cellView"  id="{{item.index}}" bindtap="clickroom">
+                <image style="left: 10px; width: 60px; height: 60px; background-color: #888888;" mode="{{top}}" src="{{src}}"></image>
+                <text class="cellText">
+                  <text class="titleText">{{item.title}}</text>
+                  <text class="contentText">{{item.content}}</text>
+                </text>
+               <!--分割线-->
+               <view class="cellSeperatorView"  bindtap="clickroom"></view>
+        
+            </view>
+        </block>
+    </view>
+</View>
